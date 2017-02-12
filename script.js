@@ -31,6 +31,7 @@ red.addEventListener('click', function() {
 });
 
 blue.addEventListener('click' , function(){
+  brushColor = "blue";
   // .getElementById('blue')
       // event.target.setAttribute("style" , "background-color:" + brushColor);
   // console.log(brushColor);
