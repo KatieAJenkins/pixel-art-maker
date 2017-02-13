@@ -8,18 +8,24 @@
 #pixelMaker {
   width: 50%;
   float: left;
-  background-color: blue;
+  /*background-color: blue;*/
 }
 
 #colorPaletteContainer {
+  display: flex;
+  justify-content: flex-start;
   height: 100px;
   width: 50%;
   float: right;
-  background-color: green;
+  /*background-color: green;*/
 }
 
 #myGrid {
   margin: 50px 50px 50px 50px;
+}
+
+h1 {
+  margin-left: 70px;
 }
 
 .square {
@@ -36,7 +42,13 @@
 
 table { border-collapse: collapse; } tr, td { padding: 0; }
 
+/*#colors1 {
+  float: left;
+}
 
+#colors2 {
+  float: right;
+}*/
 
 #red {
   height: 20px;
@@ -55,9 +67,33 @@ table { border-collapse: collapse; } tr, td { padding: 0; }
 }
 
 #purple {
-    height: 20px;
-    width: 20px;
-    border-radius: 20px;
-    margin: 10px;
-    background-color: purple;
-  }
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  margin: 10px;
+  background-color: purple;
+}
+
+#green {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  margin: 10px;
+  background-color: green;
+}
+
+#yellow {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  margin: 10px;
+  background-color: yellow;
+}
+
+#orange {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  margin: 10px;
+  background-color: orange;
+}

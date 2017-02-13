@@ -37,3 +37,18 @@ purple.addEventListener('click' , function(){
   brushColor = "purple";
   console.log('purple');
 });
+
+green.addEventListener('click' , function(){
+  brushColor = "green";
+  console.log('green');
+});
+
+yellow.addEventListener('click' , function(){
+  brushColor = "yellow";
+  console.log('yellow');
+});
+
+orange.addEventListener('click' , function(){
+  brushColor = "orange";
+  console.log('orange');
+});
