@@ -8,12 +8,12 @@ var blue = document.querySelector('#blue');
 var purple = document.querySelector('#purple');
 // console.log(blue);
 
-var brushColor = "red";
+var brushColor = "";
 
-//set square background to brushColor
 var changeColor = function () {
   if (event.target !== event.currentTarget){
     // console.log(event.target);
+    //set square background to brushColor
     event.target.setAttribute("style" , "background-color:" + brushColor);
     // console.log(brushColor);
   }
