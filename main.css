@@ -14,15 +14,18 @@
 #colorPaletteContainer {
   display: flex;
   justify-content: flex-start;
-  height: 100px;
+  flex-direction: column;
+  height: 100%;
   width: 50%;
-  float: right;
+  /*float: right;*/
   /*background-color: green;*/
 }
 
 #myGrid {
   margin: 50px 50px 50px 50px;
 }
+
+
 
 h1 {
   margin-left: 70px;
@@ -41,14 +44,6 @@ h1 {
 }
 
 table { border-collapse: collapse; } tr, td { padding: 0; }
-
-/*#colors1 {
-  float: left;
-}
-
-#colors2 {
-  float: right;
-}*/
 
 #red {
   height: 20px;
