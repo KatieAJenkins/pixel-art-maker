@@ -1,6 +1,11 @@
 'use strict';
 
+//local storage testing
+localStorage.setItem('username', 'John');
+console.log("username " + localStorage.getItem("username"));
+
 var squares = document.querySelector('#myGrid');
+
 var red = document.querySelector('#red');
 // console.log(red);
 var blue = document.querySelector('#blue');
@@ -10,17 +15,23 @@ var purple = document.querySelector('#purple');
 
 var brushColor = "";
 
-var changeColor = function () {
+function changeColor () {
+  console.log("working");
+
   if (event.target !== event.currentTarget){
     // console.log(event.target);
     //set square background to brushColor
     event.target.setAttribute("style" , "background-color:" + brushColor);
     // console.log(brushColor);
   }
+
 };
 
 //event listener on entire grid
-squares.addEventListener('click', changeColor, false);
+// squares.addEventListener('click', changeColor, false);
+
+// squares.addEventListener('mousedown', changeColor);
+// squares.addEventListener('mouseup', changeColor);
 
 //event listeners on colorPalette
 red.addEventListener('click', function() {
