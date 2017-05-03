@@ -1,10 +1,33 @@
 'use strict';
 
 //local storage testing
-localStorage.setItem('username', 'John');
-console.log("username " + localStorage.getItem("username"));
+// localStorage.setItem('username', 'John');
+// console.log("username " + localStorage.getItem("username"));
+
+var localStorageObject = {};
+localStorageObject.brushColor = brushColor;
+
+console.log(localStorageObject);
+
+var localStorageObjectStringify = JSON.stringify(localStorageObject);
+console.log(localStorageObjectStringify);
+
+localStorage.setItem('firstPaint' , localStorageObjectStringify);
+
+var saveButton = document.getElementById('saveButton');
+console.log(saveButton);
+
+saveButton.addEventListener('click', function(){
+console.log('clicked');
+console.log(localStorage);
+
+var localStorageObject = {};
+localStorageObject.brushColor = brushColor;
+
+});
 
 var squares = document.querySelector('#myGrid');
+console.log(squares);
 
 var red = document.querySelector('#red');
 // console.log(red);
@@ -24,14 +47,13 @@ function changeColor () {
     event.target.setAttribute("style" , "background-color:" + brushColor);
     // console.log(brushColor);
   }
-
-};
+}
 
 //event listener on entire grid
-// squares.addEventListener('click', changeColor, false);
+squares.addEventListener('click', changeColor, false);
 
-// squares.addEventListener('mousedown', changeColor);
-// squares.addEventListener('mouseup', changeColor);
+squares.addEventListener('mousedown', changeColor);
+squares.addEventListener('mouseup', changeColor);
 
 //event listeners on colorPalette
 red.addEventListener('click', function() {
