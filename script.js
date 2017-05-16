@@ -4,6 +4,12 @@
 // localStorage.setItem('username', 'John');
 // console.log("username " + localStorage.getItem("username"));
 
+
+var saveButton = document.getElementById('saveButton');
+
+saveButton.addEventListener('click', function(){
+console.log('local storage ', localStorage);
+
 var localStorageObject = {};
 localStorageObject.brushColor = brushColor;
 
@@ -13,18 +19,45 @@ var localStorageObjectStringify = JSON.stringify(localStorageObject);
 console.log(localStorageObjectStringify);
 
 localStorage.setItem('firstPaint' , localStorageObjectStringify);
-
-var saveButton = document.getElementById('saveButton');
-console.log(saveButton);
-
-saveButton.addEventListener('click', function(){
-console.log('clicked');
 console.log(localStorage);
 
-var localStorageObject = {};
-localStorageObject.brushColor = brushColor;
-
 });
+
+//restore
+var getButton = document.getElementById('restoreButton');
+
+getButton.addEventListener('click', function() {
+  // console.log('working');
+  var painting = JSON.parse(localStorage.getItem('firstPaint'));
+  console.log(painting);
+
+  var paintingBrushColor = painting.brushColor;
+  // console.log(paintingBrushColor);
+
+  brushColor = paintingBrushColor;
+  console.log(brushColor);
+
+// console.log(squares);
+var squaresLocal = document.getElementsByClassName('square');
+
+// function mapSquares(){
+//   // let squareColorArray = [];
+//   // for(var i = 0; i < squaresLocal.length; i++){
+//   //   var squareColor = squaresLocal[i].style.backgroundColor;
+//   //   squareColorArray.push(squareColor);
+//   //   console.log(squareColorArray);
+//     // document.getElement
+//     // localStorage.setItem('squareColorArray' , squareColorArray);
+//     // console.log(localStorage);
+//   }
+// }
+
+// mapSquares();
+
+// console.log(squaresLocal);
+  // console.log('squares ', squares.children());
+});
+console.log(getButton);
 
 var squares = document.querySelector('#myGrid');
 console.log(squares);
@@ -39,7 +72,7 @@ var purple = document.querySelector('#purple');
 var brushColor = "";
 
 function changeColor () {
-  console.log("working");
+  // console.log("working");
 
   if (event.target !== event.currentTarget){
     // console.log(event.target);
@@ -51,7 +84,6 @@ function changeColor () {
 
 //event listener on entire grid
 squares.addEventListener('click', changeColor, false);
-
 squares.addEventListener('mousedown', changeColor);
 squares.addEventListener('mouseup', changeColor);
 
